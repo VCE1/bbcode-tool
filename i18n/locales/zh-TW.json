@@ -1,0 +1,18 @@
+{
+  "language": "語言",
+  "bbcode_generator": "BBCode 生成器",
+  "raw_preview_toggle": "展開原始預覽",
+  "raw_preview_collapse": "收起原始預覽",
+  "copy_raw": "複製原始代碼",
+  "add": "添加",
+  "placeholder_url": "請輸入網址",
+  "placeholder_page": "請輸入頁數",
+  "placeholder_romaji": "請輸入羅馬音",
+  "placeholder_japanese": "請輸入日文",
+  "placeholder_title": "請輸入標題",
+  "bbcode_preview": "BBCode 預覽",
+  "copy_failed": "複製失敗，請重試",
+  "unsaved_warning": "你可能有未保存的內容，確定要離開嗎？",
+  "en": "English",
+  "zh": "簡體中文"
+}

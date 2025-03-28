@@ -1,0 +1,18 @@
+{
+  "language": "Language",
+  "bbcode_generator": "BBCode 生成器",
+  "raw_preview_toggle": "展开原始预览",
+  "raw_preview_collapse": "收起原始预览",
+  "copy_raw": "复制原始代码",
+  "add": "添加",
+  "placeholder_url": "请输入网址",
+  "placeholder_page": "请输入页数",
+  "placeholder_romaji": "请输入罗马音",
+  "placeholder_japanese": "请输入日文",
+  "placeholder_title": "请输入标题",
+  "bbcode_preview": "BBCode 预览",
+  "copy_failed": "复制失败，请重试",
+  "unsaved_warning": "你可能有未保存的内容，确定要离开吗？",
+  "en": "English",
+  "zh": "简体中文"
+}
