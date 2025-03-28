@@ -11,21 +11,17 @@ A handy BBCode form generator that helps users quickly create and display chapte
    git clone https://github.com/VCE1/bbcode-tool.git
    ```
 
+## [LIVE DEMO](https://https://bbcode-tool.vercel.app/)
+
 ## Setup
 
-1. Clone the repository
-
-   ```bash
-   git clone https://github.com/yourusername/repository-name.git
-   ```
-
-2. Install dependencies
+1. Install dependencies
 
    ```bash
    npm install
    ```
 
-3. Run the project
+2. Run the project
    ```bash
    npm run dev
    ```
