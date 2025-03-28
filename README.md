@@ -11,7 +11,8 @@ A handy BBCode form generator that helps users quickly create and display chapte
    git clone https://github.com/VCE1/bbcode-tool.git
    ```
 
-## [LIVE DEMO](https://https://bbcode-tool.vercel.app/)
+## [Live Demo](https://eh-bbcode-tool.vercel.app/)
+
 
 ## Setup
 
