@@ -1,0 +1,18 @@
+{
+  "language": "Language",
+  "bbcode_generator": "BBCode Generator",
+  "raw_preview_toggle": "Expand Raw Preview",
+  "raw_preview_collapse": "Collapse Raw Preview",
+  "copy_raw": "Copy Raw Code",
+  "add": "Add",
+  "placeholder_url": "Enter URL",
+  "placeholder_page": "Enter Pages",
+  "placeholder_romaji": "Enter Romaji",
+  "placeholder_japanese": "Enter Japanese",
+  "placeholder_title": "Enter Title",
+  "bbcode_preview": "BBCode Preview",
+  "copy_failed": "Copy failed, please try again",
+  "unsaved_warning": "You have unsaved content, are you sure you want to leave?",
+  "en": "English",
+  "zh": "Chinese"
+}
