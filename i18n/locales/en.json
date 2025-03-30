@@ -13,6 +13,7 @@
   "bbcode_preview": "BBCode Preview",
   "copy_failed": "Copy failed, please try again",
   "unsaved_warning": "You have unsaved content, are you sure you want to leave?",
-  "en": "English",
-  "zh": "Chinese"
+  "about": "About",
+  "bbcode_description": "This is a convenient BBCode form generator that helps users quickly create and display chapter indexes for easy navigation.",
+  "github": "Built based on Nuxt3 and deployed using Vercel, you can find this project on Github"
 }

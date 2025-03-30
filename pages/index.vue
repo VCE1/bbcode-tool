@@ -1,23 +1,13 @@
 <template>
     <div class="container mx-auto p-4">
+
         <div class="flex justify-between items-center mb-4">
-            <h1 class="text-2xl font-bold">{{ $t('bbcode_generator') }}</h1>
-            <div class="flex items-center space-x-2">
-                <ThemeToggle />
-                <!-- Language Switcher Button -->
-                <button class="btn" popovertarget="popover-1" style="anchor-name:--anchor-1">
-                    {{ $t('language') }}
-                </button>
-                <ul class="dropdown menu w-auto rounded-box bg-base-100 shadow-sm" popover id="popover-1"
-                    style="position-anchor:--anchor-1">
-                    <li><a @click="changeLanguage('en')">English</a></li>
-                    <li><a @click="changeLanguage('zh-CN')">简体中文</a></li>
-                    <li><a @click="changeLanguage('zh-TW')">繁体中文</a></li>
-                </ul>
-            </div>
+            <Navbar />
         </div>
 
-        <div v-for="(item, index) in items" :key="index" class="grid grid-cols-12 gap-2 items-center mb-2">
+        <div v-for="(item, index) in items" :key="index" class="grid grid-cols-12 gap-2 items-center mb-2"
+            draggable="true" @dragstart="handleDragStart($event, index)" @dragover="handleDragOver($event)"
+            @drop="handleDrop($event, index)" @dragend="handleDragEnd">
             <input type="text" v-model="item.url" :placeholder="$t('placeholder_url')"
                 class="input input-bordered col-span-3" @input="formatInput(index, 'url')" />
             <input type="text" v-model="item.page" :placeholder="$t('placeholder_page')"
@@ -39,7 +29,8 @@
                 :value="formattedBBCode"></textarea>
             <div class="mt-4">
                 <button @click="toggleRawPreview" class="btn btn-accent">
-                    {{ showRawPreview ? '🔽 ' + $t('raw_preview_collapse') : $t('raw_preview_toggle') }}
+                    {{ showRawPreview ? '➖ ' + $t('raw_preview_collapse') : '➕ ' + $t('raw_preview_toggle') }}
+
                 </button>
                 <div v-if="showRawPreview" class="mt-2 p-3 bg-base-200 rounded">
                     <pre class="whitespace-pre-wrap text-sm text-base-content">{{ rawBBCode }}</pre>
@@ -53,18 +44,6 @@
 
 <script setup>
 import { ref, computed, onMounted, onBeforeUnmount } from 'vue';
-import ThemeToggle from "@/components/ThemeToggle.vue";
-import { useI18n } from 'vue-i18n';
-const router = useRouter();
-
-const { locale } = useI18n();
-const changeLanguage = (lang) => {
-    locale.value = lang;
-    console.log('Language changed to:', locale.value);
-    router.push({ path: `/${lang}` });
-
-};
-
 
 const items = ref([]);
 const showRawPreview = ref(false);
@@ -101,6 +80,29 @@ const formatInput = (index, field) => {
 
     items.value[index][field] = value;
     showWarning.value = true;
+};
+
+const handleDragStart = (event, index) => {
+    event.dataTransfer.setData('index', index);
+    event.target.style.opacity = '0.5';
+};
+
+const handleDragOver = (event) => {
+    event.preventDefault();
+    event.target.classList.add('drag-over');
+};
+
+const handleDrop = (event, index) => {
+    event.preventDefault();
+    const draggedIndex = event.dataTransfer.getData('index');
+    const draggedItem = items.value[draggedIndex];
+    items.value.splice(draggedIndex, 1);
+    items.value.splice(index, 0, draggedItem);
+};
+
+const handleDragEnd = () => {
+    const itemsList = document.querySelectorAll('[draggable="true"]');
+    itemsList.forEach(item => item.style.opacity = '1');
 };
 
 const getAuthor = (item) => {

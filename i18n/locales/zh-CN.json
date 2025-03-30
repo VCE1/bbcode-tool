@@ -1,5 +1,5 @@
 {
-  "language": "Language",
+  "language": "语言",
   "bbcode_generator": "BBCode 生成器",
   "raw_preview_toggle": "展开原始预览",
   "raw_preview_collapse": "收起原始预览",
@@ -13,6 +13,7 @@
   "bbcode_preview": "BBCode 预览",
   "copy_failed": "复制失败，请重试",
   "unsaved_warning": "你可能有未保存的内容，确定要离开吗？",
-  "en": "English",
-  "zh": "简体中文"
+  "about": "关于",
+  "bbcode_description": "这是一个便捷的 BBCode 表单生成器，帮助用户快速创建并展示章节索引，方便快速跳转到各章节内容。",
+  "github": "基于Nuxt3构建，使用Vercel部署，你可以在Github上找到这个项目"
 }

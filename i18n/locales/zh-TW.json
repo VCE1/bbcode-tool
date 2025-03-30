@@ -13,6 +13,7 @@
   "bbcode_preview": "BBCode 預覽",
   "copy_failed": "複製失敗，請重試",
   "unsaved_warning": "你可能有未保存的內容，確定要離開嗎？",
-  "en": "English",
-  "zh": "簡體中文"
+  "about": "關於",
+  "bbcode_description": "這是一個便捷的 BBCode 表單生成器，幫助用戶快速創建並展示章節索引，方便快速跳轉到各章節內容。",
+  "github": "基於Nuxt3構建，使用Vercel部署，你可以在Github上找到這個項目"
 }
